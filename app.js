@@ -43,7 +43,7 @@ app.get("/", (req, res) => {
 app.post("/getAllMember", async (req, res) => {
   try {
     const user = await User.find();
-    res.status(200).json({ body: user });
+    res.status(204).json({ body: user });
   } catch (err) {
     res.json({ message: err });
   }
