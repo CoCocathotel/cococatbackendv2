@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "API Working"});
 });
 
-app.get("/getAllMember", async (req, res) => {
+app.get("/cms", async (req, res) => {
   try {
     const user = await User.find();
     res.status(204).json({ body: user });
