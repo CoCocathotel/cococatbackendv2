@@ -40,7 +40,7 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "API Working"});
 });
 
-app.post("/v1/getAllMember", async (req, res) => {
+app.post("/getAllMember", async (req, res) => {
   try {
     const user = await User.find();
     res.status(200).json({ body: user });
